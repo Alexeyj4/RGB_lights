@@ -2,12 +2,12 @@ const int r=3;//red led pin
 const int g=6;//green led pin
 const int b=5;//blue led pin
 int s=0;//step of program
-int len=10;//length of program
+int len=4;//length of program
 
-char seq[][10] = { 
-  {255,  120,  40,   0,   0,   0,   0,   0,   0,   0},  //r-channel sequence
-  {  0,    0,  40, 120, 255, 120,  40,   0,   0,   0},  //g-channel sequence
-  {  0,    0,   0,   0,   0,   0,  40, 120, 255, 120}   //b-channel sequence
+char seq[][4] = { 
+  {255,255, 0, 0},  //r-channel sequence
+  {255,0,255,0},  //g-channel sequence
+  {120,0,0,255}   //b-channel sequence
 };
 
 void setup() {
@@ -35,7 +35,7 @@ void loop() {
 
   s++;
 
-  delay(1000);
+  delay(2000);
 
 
 }
